@@ -1,0 +1,22 @@
+{
+  "name": "expenses-chart-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass style.scss style.css",
+    "postbuild": "postcss style.css -u autoprefixer cssnano -r --no-map",
+    "dev:build": "sass -w style.scss style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19"
+  },
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}
