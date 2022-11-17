@@ -1,0 +1,128 @@
+//Font
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+$dmFont: "DM Sans", sans-serif;
+
+//Colors
+$softRed: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+
+$darkBrown: hsl(25, 47%, 15%);
+$mediumBrown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$veryPaleOrange: hsl(33, 100%, 98%);
+
+html,
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $cream;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 96vh;
+  width: 92%;
+  font-family: $dmFont;
+}
+
+.top-bar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $softRed;
+  color: $veryPaleOrange;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.top-bar-title {
+  font-size: 17px;
+  margin-bottom: 0.5rem;
+}
+
+.top-bar-total {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo-container {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.graph-container {
+  width: 100%;
+  background-color: $veryPaleOrange;
+  border-radius: 15px;
+}
+
+.header {
+  font-size: 22px;
+  font-weight: 700;
+
+  margin: 1rem;
+}
+
+.graph {
+  display: flex;
+  align-items: flex-end;
+  margin: 0.5rem;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  width: 2rem;
+  background-color: $softRed;
+  margin: 0.4rem;
+  border-radius: 4px;
+}
+
+.bar:hover {
+  background-color: $cyan;
+  cursor: pointer;
+}
+
+.total {
+  background-color: $darkBrown;
+  color: $veryPaleOrange;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 12px;
+  padding: 0.25rem;
+  visibility: hidden;
+}
+.bar:hover .total {
+  visibility: visible;
+}
+
+.totals-container {
+  border-top: solid 3px $cream;
+}
