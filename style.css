@@ -26,6 +26,11 @@ body {
   width: 92%;
   font-family: "DM Sans", sans-serif;
 }
+@media screen and (min-width: 450px) {
+  .main {
+    width: 450px;
+  }
+}
 
 .top-bar-container {
   width: 100%;
@@ -35,65 +40,88 @@ body {
   background-color: hsl(10deg, 79%, 65%);
   color: hsl(33deg, 100%, 98%);
   margin: 1rem;
-  border-radius: 15px;
+  border-radius: 13px;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .top-bar-title {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 0.5rem;
 }
 
 .top-bar-total {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 .logo-container {
   height: 40px;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .graph-container {
   width: 100%;
   background-color: hsl(33deg, 100%, 98%);
-  border-radius: 15px;
+  border-radius: 13px;
 }
 
 .header {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 700;
-  margin: 1rem;
+  color: hsl(25deg, 47%, 15%);
+  margin: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .graph {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   margin: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 450px) {
+  .graph {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
 }
 
 .bar-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .bar {
+  display: block;
   width: 2rem;
   background-color: hsl(10deg, 79%, 65%);
   margin: 0.4rem;
   border-radius: 4px;
 }
+@media screen and (min-width: 450px) {
+  .bar {
+    width: 2.5rem;
+  }
+}
 
 .bar:hover {
   background-color: hsl(186deg, 34%, 60%);
   cursor: pointer;
+}
+
+.day {
+  text-align: center;
+  font-size: 12px;
+  color: hsl(28deg, 10%, 53%);
+  margin-top: 0.2rem;
 }
 
 .total {
@@ -106,12 +134,49 @@ body {
   visibility: hidden;
 }
 
-.bar:hover .total {
+.bar:hover ~ .total {
   visibility: visible;
 }
 
 .totals-container {
-  border-top: solid 3px hsl(27deg, 66%, 92%);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border-top: solid 2px hsl(27deg, 66%, 92%);
+  width: 85%;
+}
+
+.this-month-title {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 16px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.monthly-total {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+  color: hsl(25deg, 47%, 15%);
+}
+
+.last-month-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.percentage {
+  font-weight: 700;
+  text-align: right;
+  font-size: 16px;
+  color: hsl(25deg, 47%, 15%);
+}
+
+.last-month {
+  font-size: 16px;
+  color: hsl(28deg, 10%, 53%);
 }
 
 /*# sourceMappingURL=style.css.map */

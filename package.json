@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "sass style.scss style.css",
-    "postbuild": "postcss style.css -u autoprefixer cssnano -r --no-map",
     "dev:build": "sass -w style.scss style.css"
   },
   "keywords": [],

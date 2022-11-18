@@ -11,6 +11,9 @@ $mediumBrown: hsl(28, 10%, 53%);
 $cream: hsl(27, 66%, 92%);
 $veryPaleOrange: hsl(33, 100%, 98%);
 
+//variables
+$mediumFont: 16px;
+
 html,
 body,
 h1,
@@ -37,7 +40,11 @@ body {
   align-items: center;
   min-height: 96vh;
   width: 92%;
+
   font-family: $dmFont;
+  @media screen and (min-width: 450px) {
+    width: 450px;
+  }
 }
 
 .top-bar-container {
@@ -48,66 +55,85 @@ body {
   background-color: $softRed;
   color: $veryPaleOrange;
   margin: 1rem;
-  border-radius: 15px;
+  border-radius: 13px;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .top-bar-title {
-  font-size: 17px;
+  font-size: $mediumFont;
   margin-bottom: 0.5rem;
 }
 
 .top-bar-total {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 .logo-container {
   height: 40px;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .graph-container {
   width: 100%;
   background-color: $veryPaleOrange;
-  border-radius: 15px;
+  border-radius: 13px;
 }
 
 .header {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 700;
+  color: $darkBrown;
 
-  margin: 1rem;
+  margin: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .graph {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   margin: 0.5rem;
+  margin-bottom: 1.25rem;
+  @media screen and (min-width: 450px) {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
 }
 
 .bar-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .bar {
+  display: block;
   width: 2rem;
   background-color: $softRed;
   margin: 0.4rem;
   border-radius: 4px;
+  @media screen and (min-width: 450px) {
+    width: 2.5rem;
+  }
 }
 
 .bar:hover {
   background-color: $cyan;
   cursor: pointer;
+}
+
+.day {
+  text-align: center;
+  font-size: 12px;
+  color: $mediumBrown;
+  margin-top: 0.2rem;
 }
 
 .total {
@@ -119,10 +145,47 @@ body {
   padding: 0.25rem;
   visibility: hidden;
 }
-.bar:hover .total {
+
+.bar:hover ~ .total {
   visibility: visible;
 }
 
 .totals-container {
-  border-top: solid 3px $cream;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border-top: solid 2px $cream;
+  width: 85%;
+}
+
+.this-month-title {
+  color: $mediumBrown;
+  font-size: $mediumFont;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.monthly-total {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+  color: $darkBrown;
+}
+
+.last-month-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+.percentage {
+  font-weight: 700;
+  text-align: right;
+  font-size: $mediumFont;
+  color: $darkBrown;
+}
+
+.last-month {
+  font-size: $mediumFont;
+  color: $mediumBrown;
 }

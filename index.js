@@ -14,14 +14,13 @@ const getData = async (url) => {
 const renderGraph = (data) => {
   data.forEach((day) => {
     const barContainer = `<div class="bar-container">
-        <div class="total">$${day.amount}</div>
-        <div class="bar" style="height:${day.amount * 2.7}px"></div>
         <div class="day">${day.day}</div>
+        <div class="bar" style="height:${day.amount * 2.7}px"></div>
+        <div class="total">$${day.amount}</div>
       </div>`;
 
     graph.innerHTML += barContainer;
   });
-  console.log(graph, data);
 };
 
 getData(url).then(renderGraph);
