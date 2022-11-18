@@ -17,5 +17,13 @@
   },
   "dependencies": {
     "sass": "^1.56.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilderav86/expenses-chart-component-main.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wilderav86/expenses-chart-component-main/issues"
+  },
+  "homepage": "https://github.com/wilderav86/expenses-chart-component-main#readme"
 }
